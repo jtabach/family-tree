@@ -9,7 +9,7 @@ const useFamilyTree = (id) => {
   const [children, setChildren] = useState([]);
 
   useEffect(() => {
-    const userObj = fakeApi.getMyUser(3);
+    const userObj = fakeApi.getUser(id);
     const parentsObj = fakeApi.getParents(userObj);
     const spouseObj = fakeApi.getSpouse(userObj);
     const siblingsObj = fakeApi.getSiblings(userObj);

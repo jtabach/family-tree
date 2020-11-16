@@ -1,11 +1,15 @@
+import { useEffect } from 'react'
 import useFamilyTree from '../hooks/useFamilyTree';
 import styles from './MyUser.module.css';
+import {
+  useParams
+} from "react-router-dom";
 
 import Card from '../components/Card';
 
 const UserInfo = () => {
-  const USER_ID = 3;
-  const { user, parents, spouse, siblings, children } = useFamilyTree(USER_ID);
+  const { id } = useParams();
+  const { user, parents, spouse, siblings, children } = useFamilyTree(id);
 
   return (
     <div className={styles['UserInfo']}>
