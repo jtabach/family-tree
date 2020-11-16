@@ -1,6 +1,6 @@
 const EditUser = () => {
   return (
-    <div>Edit User</div>
+    <div>Ran out of time to implement this page</div>
   );
 };
 

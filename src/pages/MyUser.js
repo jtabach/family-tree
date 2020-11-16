@@ -1,5 +1,6 @@
 import useFamilyTree from '../hooks/useFamilyTree';
 import styles from './MyUser.module.css';
+import { Link } from "react-router-dom";
 
 import Card from '../components/Card';
 
@@ -9,10 +10,14 @@ const MyUser = () => {
 
   return (
     <div className={styles['myuser']}>
+      <h1 className={styles['title']}>My User</h1>
       <div className={styles['card-wrapper']}>
         <ul className={styles['card-list']}>
           <Card user={user} clickable={false} />
         </ul>
+      </div>
+      <div className={styles['edit-info']}>
+        <Link to="/edit">Edit my Info</Link>
       </div>
       { 
         parents.length &&

@@ -24,7 +24,7 @@ ReactDOM.render(
         <Route path="/user/:id">
           <UserInfo />
         </Route>
-        <Route path="/edit/:id">
+        <Route path="/edit">
           <EditUser />
         </Route>
       </Switch>

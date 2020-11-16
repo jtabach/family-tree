@@ -13,6 +13,7 @@ const UserInfo = () => {
 
   return (
     <div className={styles['UserInfo']}>
+      <h1 className={styles['title']}>User Info</h1>
       <div className={styles['card-wrapper']}>
         <ul className={styles['card-list']}>
           <Card user={user} clickable={false} />

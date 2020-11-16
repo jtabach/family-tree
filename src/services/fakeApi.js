@@ -30,7 +30,6 @@ const fakeApi = {
   },
   getSiblings(user) {
     return people.filter(person => {
-      console.log(person.parentId1, user.parentId1, person.parentId2, user.parentId2)
       if (user.parentId1 || user.parentId2) {
         return (person.parentId1 === user.parentId1 || person.parentId2 === user.parentId2) && person.id !== user.id;
       }
