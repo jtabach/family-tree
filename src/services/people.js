@@ -1,4 +1,4 @@
-[
+const people = [
   {
   id: 0,
   name: "Emelia Moody",
@@ -263,4 +263,6 @@
   parentId2: 32,
   hometown: "Philadelphia"
   }
-  ]
+  ];
+
+  export default people;
