@@ -18,7 +18,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route exact path="/myuser">
+        <Route exact path="/">
           <MyUser />
         </Route>
         <Route path="/user/:id">

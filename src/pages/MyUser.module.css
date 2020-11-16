@@ -1,0 +1,17 @@
+.card-wrapper {
+  text-align: center;
+  margin: 24px;
+}
+
+.header {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
