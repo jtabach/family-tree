@@ -1,29 +1,12 @@
-import { useState, useEffect } from 'react';
-import fakeApi from '../services/fakeApi';
+import useFamilyTree from '../hooks/useFamilyTree';
 
 const MyUser = () => {
-  const [user, setUser] = useState({});
-  const [parents, setParents] = useState([]);
-  const [spouse, setSpouse] = useState({});
-  const [siblings, setSiblings] = useState([]);
-  const [children, setChildren] = useState([]);
-
-  useEffect(() => {
-    const userObj = fakeApi.getMyUser();
-    const parentsObj = fakeApi.getParents(userObj);
-    const spouseObj = fakeApi.getSpouse(userObj);
-    const siblingsObj = fakeApi.getSiblings(userObj);
-    const childrenObj = fakeApi.getChildren(userObj);
-    setUser(userObj);
-    setParents(parentsObj);
-    setSpouse(spouseObj);
-    setSiblings(siblingsObj);
-    setChildren(childrenObj);
-  }, []);
+  const USER_ID = 3;
+  const { user, parents, spouse, siblings, children } = useFamilyTree(USER_ID);
 
   return (
     <div>
-      <div>{user.name} me</div>
+      <div>{user.name}</div>
       {
         parents.length
         ?

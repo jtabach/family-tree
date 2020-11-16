@@ -1,9 +1,9 @@
 import people from './people.js';
 
 const fakeApi = {
-  getMyUser() {
+  getMyUser(id) {
     return people.find(person => {
-      return person.id === 3; // my hardcoded user
+      return person.id === id; // my hardcoded user
     })
   },
   getAllUsers() {
